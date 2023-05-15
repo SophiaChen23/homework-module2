@@ -17,6 +17,9 @@ header{
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
     background-size: 1500px;
 }
+#cliff header {
+    background: no-repeat lightgray url(images/forest_cliff.jpg);
+}
 .main-header{
     background-color: rgb(255, 255, 255, 0.8);
     width:700px;
@@ -107,7 +110,7 @@ footer #nondisclaimer .copy{
 }
 footer #nondisclaimer .social{
     padding:2.5em;
-    margin-right: 9.25em;
+    margin-right: 9em;
     float: right;
 }
 footer #disclaimer {
@@ -218,6 +221,36 @@ span {
     }
     fieldset div {
         margin-left: 20px;
+    }
+
+    .picture-wall {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .picture {
+        position: relative;
+    }
+
+    .picture img {
+        width: 100%;
+        height: auto;
+    }
+
+    .label {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 5px;
+    }
+    .header {
+        background-color: darkred;
+        color: white;
+        padding: 10px;
+        text-align: center;
     }
 
 

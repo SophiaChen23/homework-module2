@@ -252,5 +252,25 @@ span {
         padding: 10px;
         text-align: center;
     }
+    #timeofday {
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #3a3a3a;
+        background: linear-gradient(0deg, rgba(251, 215, 139, 1) 0%, rgba(118, 213, 245, 1) 100%);
+
+
+        padding: 10px;
+        border-radius: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #clock {
+
+        color: #125688;
+    }
+
 
 

@@ -27,6 +27,10 @@
     </nav>
   </div>
 </header>
+<section id = "timeofday">
+  <span> Your Current Local Time: </span>
+  <span id = "clock"><</span>
+</section>
 <br><br>
 <h1 id = "bear">California's Greatest Cliffs</h1>
 <p>
@@ -61,26 +65,9 @@
 
 <br><br>
 
-<section >
+<section>
   <ul id = "partners">
-    <li class = "partner">
-      <img src = "images/partners/partner-bustour.png" alt = "Partner Bus Tours">
-    </li>
-    <li class = "partner">
-      <img src = "images/partners/partner-cabinrental.png" alt = "Partner Cabin Rental">
-    </li>
-    <li class = "partner">
-      <img src = "images/partners/partner-campingadv.png" alt = "Partner Camping Adventure">
-    </li>
-    <li class = "partner">
-      <img src = "images/partners/partner-collegetours.png" alt = "Partner College Tours">
-    </li>
-    <li class = "partner">
-      <img src = "images/partners/partner-rentalbike.png" alt = "Partner Bike Rentals">
-    </li>
-    <li class = "partner">
-      <img src = "images/partners/partner-tourgroup.png" alt = "Partner Tour Group">
-    </li>
+    <script src="logo.js"></script>
   </ul>
 </section>
 
@@ -100,5 +87,75 @@
     <p> This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p>
   </div>
 </footer>
+<script>
+  function currentTime() {
+    var d = new Date();
+    var hr = d.getHours();
+    var min = d.getMinutes();
+    var sec = d.getSeconds();
+    var ampm;
+
+    var utchr = d.getUTCHours();
+    // console.log(hr + " " + utchr);
+    utchr = utchr < hr ? utchr + 24 : utchr;
+
+    // var gmtHour = utchr > 12 ? utchr - 12 : utchr;
+
+
+    // var localHour = d.getHours();
+
+    var timeDiff = utchr - hr;
+    var adjTimeDiff = Math.abs(timeDiff);
+
+
+    var convertedTimezoneAbbr = "";
+    switch (adjTimeDiff) {
+      case 7:
+        convertedTimezoneAbbr = "PT";
+        break;
+      case 6:
+        convertedTimezoneAbbr = "MT";
+        break;
+      case 5:
+        convertedTimezoneAbbr = "CT";
+        break;
+      case 4:
+        convertedTimezoneAbbr = "ET";
+        break;
+      default:
+        convertedTimezoneAbbr = "nothing"; // Use original abbreviation if no match
+        break;
+    }
+
+
+
+    if (sec < 10) {
+      sec = "0" + sec;
+    }
+    if (min < 10) {
+      min = "0" + min;
+    }
+    if (hr == 12) {
+      ampm = "PM";
+    } else if (hr > 12){
+      ampm = "PM";
+    } else {
+      ampm = "AM";
+    }
+    var time = hr + ":" + min + ":" + sec + " " + ampm + " " + convertedTimezoneAbbr;
+
+
+    document.getElementById("clock").innerText = time;
+  }
+
+  // function setInterbal(currentTime, milliseconds) {
+  //
+  // }
+
+  //document.getElementById("clock").innerText = time;
+  setInterval(currentTime, 1000);
+  currentTime();
+</script>
+
 </body>
 </html>

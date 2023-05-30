@@ -200,7 +200,7 @@ span {
     }
 
     .button input[type="submit"]  {
-        background-color: #4977D1;
+        /*background-color: #4977D1;*/
         color: white;
         margin-left: 470px;
         text-align: right;

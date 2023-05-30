@@ -202,9 +202,11 @@ span {
     .button input[type="submit"]  {
         /*background-color: #4977D1;*/
         color: white;
-        margin-left: 450px;
-        text-align: right;
+        margin-left: 430px;
+        text-align: center;
         display: inline-block;
+        width: 80px; /* Adjust the width as needed */
+        height: 30px; /* Adjust the height as needed */
     }
     input[type="text"] {
         width: 540px;

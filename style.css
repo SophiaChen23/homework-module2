@@ -202,7 +202,7 @@ span {
     .button input[type="submit"]  {
         /*background-color: #4977D1;*/
         color: white;
-        margin-left: 470px;
+        margin-left: 450px;
         text-align: right;
         display: inline-block;
     }
@@ -271,6 +271,23 @@ span {
 
         color: #125688;
     }
+    .randomcode {
+        display: flex;
+        align-items: center;
+    }
 
+    .randomcode input[type="text"] {
+        width: 200px;
+        margin-left: 220px;
+        /*flex: 1;*/
 
+    }
 
+    .randomcode p {
+        background-size: 400px 300px;
+        margin-left: 10px;
+        font-size: medium;
+        background-color: #999999;
+
+        /*font-size: small;*/
+    }

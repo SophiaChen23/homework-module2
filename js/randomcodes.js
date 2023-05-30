@@ -1,9 +1,9 @@
 function generateCode() {
-    var code = " ";
-    var str = "ABCDEFGHIJKLMNOPQRSTUVWZabcdefghijklmnopqrstuwxyz0123456789@#$";
+    var code = '';
+    var str = 'ABCDEFGHIJKLMNOPQRSTUVWZabcdefghijklmnopqrstuwxyz0123456789@#$';
 
     for (i = 1; i <= 8; i++) {
-        var char = Math.random() * str.length;
+        var char = Math.floor(Math.random() * str.length);
         code += str.charAt(char);
     }
     return code;
